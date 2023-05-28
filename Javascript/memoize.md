@@ -84,7 +84,7 @@ A potential downside of memoizing network requests is the risk of data staleness
 ```js
 function memoize(fn) {
     const cache= {};// notice that we cannot make this inside below function
-    return function(...args) {// desctrcturing is expensive operation
+    return function(...args) {
         const key= JSON.stringify(args);
         // above wont work as args can be objects , not two empty objects are ===
         console.log(key);
