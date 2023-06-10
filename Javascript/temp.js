@@ -1,20 +1,34 @@
-function uniqKeyGenerator(){
-    let uniqArgumentCount=0;
-    const map= new Map();
-    return function (arg){
-        if(map.has(arg)) return map.get(arg);
-        map.set(arg,++uniqArgumentCount);
-        return uniqArgumentCount;
+/**
+ * @param {Function} fn
+ * @param {number} t
+ * @return {Function}
+ */
+var throttle = function(fn, t) {
+    let delay = null;
+    let latestArgs = null;
+
+    const timeoutFunction = () => {
+      if (latestArgs === null) {
+        delay = null; // enter the waiting phase
+      } else {
+        fn(...latestArgs);
+        latestArgs = null;
+        delay = setTimeout(timeoutFunction, t);
+      }
+    };
+
+    return function throttled(...args) {
+      if (delay) {
+        latestArgs = args;
+      } else {
+        delay = setTimeout(timeoutFunction, t);// enter the looping phase
+        return fn(...args);
+      }
     }
-}
-function memoize(fn) {
-    const cache= {};
-    const keyGeneratorcb= uniqKeyGenerator();
-    return function(...args) {
-        const numbers = args.map(keyGeneratorcb);
-        const key= numbers.join(',');
-        let cacheVal=cache[key];
-        if(cacheVal!== undefined) return cacheVal;//cache hit
-        return cache[key]=fn(...args);
-    }
-}
+  };
+
+  /**
+   * const throttled = throttle(console.log, 100);
+   * throttled("log"); // logged immediately.
+   * throttled("log"); // logged at t=100ms.
+   */
