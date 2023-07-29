@@ -148,16 +148,16 @@ Mechanisms:
 - Caching: Storing frequently accessed data locally to reduce the need for repeated requests to the server.
 
 3. Protocols and Examples of the Application Layer:
-HTTP (Hypertext Transfer Protocol): Used for web browsing, retrieving web pages, and transferring data between clients and servers.
-HTTPS (HTTP Secure): A secure version of HTTP that employs SSL/TLS encryption for secure web communication.
-SMTP (Simple Mail Transfer Protocol): Sending and relaying email messages between email servers.
-POP3 (Post Office Protocol version 3): Retrieving email messages from a remote mail server to a client's device.
-IMAP (Internet Message Access Protocol): Allowing clients to access and manage email messages stored on a remote mail server.
-DNS (Domain Name System): Resolving domain names into IP addresses, translating human-readable names to numerical IP addresses for internet communication.
-FTP (File Transfer Protocol): Transferring files between a client and server, often used for website hosting or file sharing.
-SSH (Secure Shell): Securely accessing and managing remote devices over a network using encrypted communication.
-SNMP (Simple Network Management Protocol): Monitoring and managing network devices and equipment.
-LDAP (Lightweight Directory Access Protocol): Accessing and maintaining directory services, often used for centralized user authentication and authorization.
+- HTTP (Hypertext Transfer Protocol): Used for web browsing, retrieving web pages, and transferring data between clients and servers.
+- HTTPS (HTTP Secure): A secure version of HTTP that employs SSL/TLS encryption for secure web communication.
+- SMTP (Simple Mail Transfer Protocol): Sending and relaying email messages between email servers.
+- POP3 (Post Office Protocol version 3): Retrieving email messages from a remote mail server to a client's device.
+- IMAP (Internet Message Access Protocol): Allowing clients to access and manage email messages stored on a remote mail server.
+- DNS (Domain Name System): Resolving domain names into IP addresses, translating human-readable names to numerical IP addresses for internet communication.
+- FTP (File Transfer Protocol): Transferring files between a client and server, often used for website hosting or file sharing.
+- SSH (Secure Shell): Securely accessing and managing remote devices over a network using encrypted communication.
+- SNMP (Simple Network Management Protocol): Monitoring and managing network devices and equipment.
+- LDAP (Lightweight Directory Access Protocol): Accessing and maintaining directory services, often used for centralized user authentication and authorization.
 
 4. Underlying Transport layer protocols of application layer protocols
 
